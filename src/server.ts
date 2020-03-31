@@ -27,5 +27,5 @@ const PORT = 5300
 httpServer.listen({
     port: PORT
 },
-    () => console.log(`Funcionando en http://localhost:${PORT}/graphql`)
+    () => console.log(`Funcionando en http://localhost:${PORT}`)
 )
