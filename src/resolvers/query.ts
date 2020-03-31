@@ -5,6 +5,9 @@ const query: IResolvers = {
     Query: {
         estudiantes(): any {
             return database.estudiantes
+        },
+        estudiante(__: void, { id }): any {
+            return database.estudiantes.filter(estudiante => estudiante.id === id)[0];
         }
     }
 }
