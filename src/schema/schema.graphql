@@ -10,7 +10,7 @@ type Estudiante {
   name: String!
   email: String!
   website: String
-  course: [Course!]!
+  course: [Curso!]!
 }
 
 type Curso {
@@ -23,7 +23,7 @@ type Curso {
   level: Nivel!
   path: String!
   teacher: String!
-  students: [Estudiantes]
+  students: [Estudiante]
   reviews: [Valoracion!]!
 }
 
