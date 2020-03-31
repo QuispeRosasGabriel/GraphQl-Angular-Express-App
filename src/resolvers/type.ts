@@ -7,7 +7,8 @@ const type: IResolvers = {
         courses: parent => {
             const cursosLista: Array<any> = [];
             parent.courses.map((curso: string) => {
-                cursosLista.push(_.filter(database.cursos, ['id', curso])[0])
+                cursosLista.push(
+                    _.filter(database.cursos, ['id', curso])[0])
             });
             return cursosLista;
         }
