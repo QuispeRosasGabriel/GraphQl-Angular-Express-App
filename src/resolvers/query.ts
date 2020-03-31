@@ -14,7 +14,6 @@ const query: IResolvers = {
                     name: `No se ha encontrado el estudiante con el id ${id}`,
                     email: "",
                     courses: []
-
                 }
             }
             return resultado;
