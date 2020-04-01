@@ -57,6 +57,26 @@ const mutation: IResolvers = {
                 reviews: []
 
             }
+        },
+        eliminarCurso(__: void, { id }): any {
+            const borrarCurso = _.remove(database.cursos, function (curso) {
+                return curso.id === id;
+            });
+            if (borrarCurso[0] === undefined) {
+                return {
+                    id: '-1',
+                    title: "El curso no se puede borrar porque no se ha encontrado",
+                    description: "",
+                    clases: -1,
+                    time: 0.0,
+                    logo: "",
+                    level: "All",
+                    path: "",
+                    teacher: "",
+                    reviews: []
+                }
+            }
+            return borrarCurso[0];
         }
     }
 }
